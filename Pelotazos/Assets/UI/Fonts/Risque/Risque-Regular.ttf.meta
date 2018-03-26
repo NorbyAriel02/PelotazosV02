@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 493e4479e2aee1942876a60c330a1505
+timeCreated: 1514379267
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Risque
+  fontNames:
+  - Risque
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

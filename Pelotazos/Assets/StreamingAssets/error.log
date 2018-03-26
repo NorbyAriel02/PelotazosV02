@@ -1,0 +1,48 @@
+
+Tuesday, January 16, 2018
+535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a35sm2429435qtb.29 - gsmtp   at System.Net.Mail.SmtpClient.Authenticate (System.String Username, System.String Password) [0x00000] in <filename unknown>:0 
+  at System.Net.Mail.SmtpClient.Authenticate () [0x00000] in <filename unknown>:0 
+  at System.Net.Mail.SmtpClient.SendCore (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+  at System.Net.Mail.SmtpClient.SendInternal (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+  at System.Net.Mail.SmtpClient.Send (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+------------------------------------------
+Tuesday, January 16, 2018
+Message could not be sent.   at System.Net.Mail.SmtpClient.Send (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+  at UserFeedbakc+<SendMail>c__Iterator0.MoveNext () [0x00184] in C:\Users\ariel\Desktop\Curso_unity3d\Pelotazos\Pelotazos\Assets\UI\Scripts\UserFeedbakc.cs:101 
+------------------------------------------
+
+esta en la tercera prueba
+Tuesday, January 16, 2018
+C:/Users/ariel/Desktop/Curso_unity3d/Pelotazos/Pelotazos/Assets/StreamingAssets\mail.log already exists   at System.IO.File.Copy (System.String sourceFileName, System.String destFileName, Boolean overwrite) [0x0013f] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.IO/File.cs:115 
+  at System.IO.File.Copy (System.String sourceFileName, System.String destFileName) [0x00000] in /Users/builduser/buildslave/mono/build/mcs/class/corlib/System.IO/File.cs:86 
+  at UserFeedbakc+<SendMail>c__Iterator0.MoveNext () [0x000c3] in C:\Users\ariel\Desktop\Curso_unity3d\Pelotazos\Pelotazos\Assets\UI\Scripts\UserFeedbakc.cs:80 
+------------------------------------------
+Wednesday, January 17, 2018
+Message could not be sent.   at System.Net.Mail.SmtpClient.Send (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+  at UserFeedbakc+<SendMail>c__Iterator0.MoveNext () [0x00160] in C:\Users\ar30983967\Desktop\sistemas\Unity\Proyectos\Pelotazos\Assets\UI\Scripts\UserFeedbakc.cs:97 
+------------------------------------------
+Wednesday, January 17, 2018
+Message could not be sent.   at System.Net.Mail.SmtpClient.Send (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+  at UserFeedbakc+<SendMail>c__Iterator0.MoveNext () [0x00160] in C:\Users\ar30983967\Desktop\sistemas\Unity\Proyectos\Pelotazos\Assets\UI\Scripts\UserFeedbakc.cs:115 
+------------------------------------------
+Wednesday, January 17, 2018
+Message could not be sent.   at System.Net.Mail.SmtpClient.Send (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+  at UserFeedbakc+<SendMail>c__Iterator0.MoveNext () [0x00160] in C:\Users\ar30983967\Desktop\sistemas\Unity\Proyectos\Pelotazos\Assets\UI\Scripts\UserFeedbakc.cs:115 
+------------------------------------------
+Wednesday, January 17, 2018
+Message could not be sent.   at System.Net.Mail.SmtpClient.Send (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+  at UserFeedbakc+<SendMail>c__Iterator0.MoveNext () [0x00160] in C:\Users\ar30983967\Desktop\sistemas\Unity\Proyectos\Pelotazos\Assets\UI\Scripts\UserFeedbakc.cs:115 
+------------------------------------------
+Wednesday, January 17, 2018
+Message could not be sent.   at System.Net.Mail.SmtpClient.Send (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+  at UserFeedbakc+<SendMail>c__Iterator0.MoveNext () [0x00160] in C:\Users\ar30983967\Desktop\sistemas\Unity\Proyectos\Pelotazos\Assets\UI\Scripts\UserFeedbakc.cs:115 
+------------------------------------------
+Wednesday, January 17, 2018
+Message could not be sent.   at System.Net.Mail.SmtpClient.Send (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+  at UserFeedbakc+<SendMail>c__Iterator0.MoveNext () [0x00160] in C:\Users\ar30983967\Desktop\sistemas\Unity\Proyectos\Pelotazos\Assets\UI\Scripts\UserFeedbakc.cs:113 
+------------------------------------------
+Wednesday, January 17, 2018
+Message could not be sent.   at System.Net.Mail.SmtpClient.Send (System.Net.Mail.MailMessage message) [0x00000] in <filename unknown>:0 
+  at UserFeedbakc+<SendMail>c__Iterator0.MoveNext () [0x00160] in C:\Users\ar30983967\Desktop\sistemas\Unity\Proyectos\Pelotazos\Assets\UI\Scripts\UserFeedbakc.cs:113 
+------------------------------------------

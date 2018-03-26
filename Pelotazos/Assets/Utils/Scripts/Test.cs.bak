@@ -1,0 +1,19 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Test : MonoBehaviour {
+	void Start () {
+	}
+	
+	void Update () {
+        if (Input.GetKeyDown(KeyCode.C))
+            Pos();
+	}
+	private void Pos()
+	{
+        
+        Debug.Log(PathHelper.ScremShot);
+	}
+    
+}
