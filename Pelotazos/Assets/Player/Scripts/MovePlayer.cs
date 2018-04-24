@@ -10,64 +10,57 @@ public enum AxisOption
     OnlyHorizontal, // Only horizontal
     OnlyVertical // Only vertical
 }
+[RequireComponent(typeof(Rigidbody2D))]
+public class MovePlayer : MonoBehaviour {
 
-public class MovePlayer : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler {
-	public Rigidbody2D rbPlayer;
-	public float speed;
-    public AxisOption axis = AxisOption.Both;
-	public Image JoystickContainer;
-	public Image Joystick;
-    public Vector2 InputDirection { set; get; }
-    public Vector3 startPos;
-    public int MovementRange = 100;
+	// PUBLIC
+	public SimpleTouchController rightController;
+	public float speedMovements = 5f;
+	public float speedContinuousLook = 100f;
+	public float speedProgressiveLook = 3000f;
+	public bool continuousRightController = true;
 
-    void Update()
-    {
-        if(InputDirection.magnitude == 0 && rbPlayer.velocity.magnitude > 0)
-            rbPlayer.velocity -= (rbPlayer.velocity / 10);
-        else
-            MovePLayer(InputDirection);
-    }
-	
-	private void MovePLayer(Vector2 Movement)
-	{        
-		if (Movement.magnitude != 0) 
-		{
-			rbPlayer.velocity = Movement * speed;	
-		} 
+	// PRIVATE
+	private Rigidbody2D _rigidbody;
+	private Vector2 prevRightTouchPos;
+
+	void Awake()
+	{
+		_rigidbody = GetComponent<Rigidbody2D>();
+		rightController.TouchEvent += RightController_TouchEvent;
+		rightController.TouchStateEvent += RightController_TouchStateEvent;
 	}
 
-	public virtual void OnPointerUp(PointerEventData data)
+	public bool ContinuousRightController
 	{
-		InputDirection = Vector2.zero;		
-        Joystick.rectTransform.anchoredPosition = InputDirection;
-    }
+		set{continuousRightController = value;}
+	}
 
-	public virtual void OnPointerDown(PointerEventData data)
+	void RightController_TouchStateEvent (bool touchPresent)
 	{
-        
-    }
-
-	public virtual void OnDrag(PointerEventData data)
-	{        
-        Vector2 pos = Vector2.zero;
-        InputDirection = Vector2.zero;
-        if (RectTransformUtility.ScreenPointToLocalPointInRectangle (
-			    JoystickContainer.rectTransform,
-			    data.position,
-			    data.pressEventCamera,
-			    out pos)) {
-
-            if (axis == AxisOption.OnlyHorizontal)
-                InputDirection = new Vector2(data.delta.x, 0);
-            else if (axis == AxisOption.OnlyVertical)
-                InputDirection = new Vector2(0, data.delta.y);
-            else
-                InputDirection = data.delta;
-
-            InputDirection = (InputDirection.magnitude > 1) ? InputDirection.normalized : InputDirection;
-
-			Joystick.rectTransform.anchoredPosition = (20 * InputDirection);			
+		if(!continuousRightController)
+		{
+			prevRightTouchPos = Vector2.zero;
 		}
-    }
+	}
+
+	void RightController_TouchEvent (Vector2 value)
+	{		
+		if(!continuousRightController)
+		{
+			_rigidbody.MovePosition(transform.position + (transform.up * rightController.GetTouchPosition.y * Time.deltaTime * speedMovements) +
+				(transform.right * rightController.GetTouchPosition.x * Time.deltaTime * speedMovements) );
+		}
+	}
+
+	void Update()
+	{
+
+	}
+
+	void OnDestroy()
+	{
+		rightController.TouchEvent -= RightController_TouchEvent;
+		rightController.TouchStateEvent -= RightController_TouchStateEvent;
+	}
 }
